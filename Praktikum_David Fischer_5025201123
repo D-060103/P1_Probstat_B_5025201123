@@ -1,10 +1,16 @@
-1. Seorang penyurvei secara acak memilih orang-orang di jalan sampai dia bertemu dengan seseorang yang menghadiri acara vaksinasi sebelumnya. 
+Seorang penyurvei secara acak memilih orang-orang di jalan sampai dia bertemu dengan seseorang yang menghadiri acara vaksinasi sebelumnya. 
 a. Berapa peluang penyurvei bertemu x = 3 orang yang tidak menghadiri acara vaksinasi sebelum keberhasilan pertama ketika p = 0,20 dari populasi menghadiri acara vaksinasi ? (distribusi Geometrik)
 > x=3
 > prob=0.20
 > dgeom(x, prob)
 
 b. mean Distribusi Geometrik dengan 10000 data random , prob = 0,20 dimana distribusi geometrik acak tersebut X = 3 ( distribusi geometrik acak () == 3 )
+mean(rgeom(n=data, prob=0.20)==3)
 
 c. Bandingkan Hasil poin a dan b , apa kesimpulan yang bisa didapatkan?
-d. Histogram Distribusi Geometrik , Peluang X = 3 gagal Sebelum Sukses Pertama e. Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik.
+Hasil yang didapatkan dari poin a dan b tidak terlalu beda jauh. Hal yang membedakan antara a dan b adalah nilai pada a adalah tetap, sedangkan b adalah random.
+
+d. Histogram Distribusi Geometrik , Peluang X = 3 gagal Sebelum Sukses Pertama
+
+
+e. Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik
