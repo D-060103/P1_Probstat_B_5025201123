@@ -1,11 +1,10 @@
 Seorang penyurvei secara acak memilih orang-orang di jalan sampai dia bertemu dengan seseorang yang menghadiri acara vaksinasi sebelumnya. 
 a. Berapa peluang penyurvei bertemu x = 3 orang yang tidak menghadiri acara vaksinasi sebelum keberhasilan pertama ketika p = 0,20 dari populasi menghadiri acara vaksinasi ? (distribusi Geometrik)
-> x=3
-> prob=0.20
-> dgeom(x, prob)
+> dgeom(3, 0.2)
 
 b. mean Distribusi Geometrik dengan 10000 data random , prob = 0,20 dimana distribusi geometrik acak tersebut X = 3 ( distribusi geometrik acak () == 3 )
-mean(rgeom(n=data, prob=0.20)==3)
+> data=10000
+> mean(rgeom(n=data, prob=0.20)==3)
 
 c. Bandingkan Hasil poin a dan b , apa kesimpulan yang bisa didapatkan?
 Hasil yang didapatkan dari poin a dan b tidak terlalu beda jauh. Hal yang membedakan antara a dan b adalah nilai pada a adalah tetap, sedangkan b adalah random.
@@ -14,3 +13,33 @@ d. Histogram Distribusi Geometrik , Peluang X = 3 gagal Sebelum Sukses Pertama
 
 
 e. Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik
+
+
+2.Terdapat 20 pasien menderita Covid19 dengan peluang sembuh sebesar 0.2. 
+Tentukan :
+a. Peluang terdapat 4 pasien yang sembuh.
+> pasien=20
+> peluang_sembuh=0.2
+> sembuh=4
+> dbinom(4, 20, 0.2)
+
+b. Gambarkan grafik histogram berdasarkan kasus tersebut.
+> data1 <- dbinom(1:20, 20, 0.2)
+> data = data.frame(y=c(data1), x=c(1:20))
+> barplot(data$y, names.arg=data$x, 
+> ylab="Peluang sembuh", xlab="Banyaknya Pasien")
+        
+c. Nilai Rataan (μ) dan Varian (σ²) dari DistribusiBinomial.
+> n=20
+> p=0.2
+> q=0.8
+> rataan=n*p
+> rataan
+> variasi=p*q*n
+> variasi
+
+3.Diketahui data dari sebuah tempat bersalin di rumah sakit tertentu menunjukkan rata-rata historis 4,5 bayi lahir di rumah sakit ini setiap hari. (gunakan Distribusi Poisson) 
+a. Berapa peluang bahwa 6 bayi akan lahir di rumah sakit ini besok?
+b. simulasikan dan buatlah histogram kelahiran 6 bayi akan lahir di rumah sakit ini selama setahun (n = 365)
+c. dan bandingkan hasil poin a dan b , Apa kesimpulan yang bisa didapatkan
+d. Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Poisson.
